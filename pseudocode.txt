@@ -22,3 +22,5 @@ function playRound(playerSelection, computerselection) {
         else if (playerSelection = "scissors" && computerSelection === b)
         console.log("You win! Scissors beats paper!");
     }
+Attempt to push prompts into an array and have the loop make the program access a different function.
+Separate what is being printed when the outcome comes so that the computer can read that and change the score separately from the function
