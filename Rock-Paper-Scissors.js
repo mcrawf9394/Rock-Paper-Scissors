@@ -2,19 +2,20 @@ let U = 0
 let C = 0
 let playerSelection
 let choice
-function player (){
-  const uChoice = prompt();
-  uChoice.toLowerCase;
-  return uChoice;
-}
+let uChoice
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    playRound(button.value, getComputerChoice());
+  })
+})
 function getComputerChoice() {
   const choices = ["rock", "paper", "scissors"];
   const num = Math.floor(Math.random() * 3);
   const computerChoice = choices[num]
   return computerChoice;
 }
-function playRound() {
-  playerSelection = player ()
+function playRound(playerSelection, choice) {
   choice = getComputerChoice ()
   let message
   if (playerSelection == choice) {
@@ -48,24 +49,6 @@ function playRound() {
     message = "Something went wrong!";
   }
   console.log(message)
+  console.log("Your Score= " + U, "Computer Score= " + C)
   return message;
 } 
-function playGame(){
-  let finalMessage
-  while (U < 5 && C < 5){
-  playRound ()
-  }
-  if (U = 5 && C != 5){
-    finalMessage = "You win the game!"
-  }
-  else if (C = 5 && U != 5){
-    finalMessage = "You lose the game!"
-  }
-  else {
-    finalMessage = "NOT COUNTED CORRECTLY"
-  }
-  console.log(finalMessage)
-  return finalMessage
-}
-playGame ()
-console.log("Your Score= " + U, "Computer Score= " + C)
