@@ -48,7 +48,31 @@ function playRound(playerSelection, choice) {
   else {
     message = "Something went wrong!";
   }
+  const response = document.querySelector('.response')
+  response.textContent = message
+  const scoreKeeping = document.querySelector('.scoreKeeping')
+  scoreKeeping.textContent = "Computer Score: " + C + "Player Score: " +U
+  endGame()
   console.log(message)
   console.log("Your Score= " + U, "Computer Score= " + C)
   return message;
 } 
+function endGame (){
+  let finalMessage
+  if (U == 5) {
+    finalMessage = "You Win the Game!"
+    U = 0
+    C = 0
+  }
+  else if (C == 5) {
+    finalMessage = "You Lose the Game!"
+    U = 0
+    C = 0
+  }
+  else {
+    finalMessage = ""
+  }
+  const finalResponse = document.querySelector('.finalMessage')
+  finalResponse.textContent = finalMessage
+  return finalMessage;
+}
