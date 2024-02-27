@@ -51,7 +51,7 @@ function playRound(playerSelection, choice) {
   const response = document.querySelector('.response')
   response.textContent = message
   const scoreKeeping = document.querySelector('.scoreKeeping')
-  scoreKeeping.textContent = "Computer Score: " + C + "Player Score: " +U
+  scoreKeeping.textContent = "Computer Score: " + C + " " + "Player Score: " + U
   endGame()
   console.log(message)
   console.log("Your Score= " + U, "Computer Score= " + C)

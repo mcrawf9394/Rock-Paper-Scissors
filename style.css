@@ -1,5 +1,6 @@
 h1{
     text-align: center;
+    color: #0066ff;
 }
 html {
     background-color: #ffccff;
@@ -9,13 +10,34 @@ html {
     flex: 1 1 1;
     align-items: center;
     align-content: center;
+    padding: 10vh;
     justify-content: space-around;
-    padding: 20vh;
 }
 .options {
-    flex: auto;
-    flex: 1 1 1;
-    flex-direction: column;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+h2 {
+    display: inline-block;
+    padding-inline: 10vw;
+    color: #0066ff;
+}
+.btn {
+    background-color: #0066ff;
+    color: #ffccff;
+    font-size: larger;
+    height: 10vh;
+    width: 20vw;
+}
+.response {
+    text-align: center;
+    color: #0066ff;
+}
+.finalMessage {
+    text-align: center;
+    color: #0066ff;
+}
+.scoreKeeping {
+    text-align: center;
+    color: #0066ff;
 }
